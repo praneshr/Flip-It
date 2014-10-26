@@ -1,0 +1,34 @@
+.outer{
+    perspective: 1000;
+    -webkit-perspective: 1000;
+}
+.outer,.front,.back{
+    height: 300px;
+    width: 300px;
+}
+.flip{
+    transition: all .5s ease;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.front,.back{
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+    position: absolute;
+    font-size: 30px;
+}
+.outer:hover .flip{
+    transform: rotateX(180deg);
+}
+.front{
+    z-index: 2;
+    transform-origin: center;
+    background: #000;
+}
+.back{
+    transform: rotateX(180deg);
+    transform-origin: center;
+    background: #414141;
+}

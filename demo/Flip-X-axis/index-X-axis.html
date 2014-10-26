@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Flip-It</title>
+        <link rel="stylesheet" href="flip-it-X-axis.css">
+    </head>
+    <body>
+        <div class="outer">
+            <div class="flip">
+                <div class="front">
+                    <!--Contents for the Front Tab-->
+                </div>
+                <div class="back">
+                    <!--Contents for the Back Tab-->
+                </div>  
+            </div>   
+        </div>
+        <script>
+            height = 300;//Define the tab height here;
+            value = height/2;
+            //This will return an array of elements
+            var transform = document.getElementsByClassName("flip");
+            transform[0].style.transformOrigin="100%"+" "+value+"px";
+        </script>
+    </body>
+
+</html>
